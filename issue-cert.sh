@@ -1,4 +1,3 @@
-```bash
 #!/usr/bin/env bash
 
 set -euo pipefail
@@ -224,4 +223,3 @@ echo "Cron:"
 echo "  0 0 28 * * cd /opt/certbot && docker compose run --rm certbot renew"
 echo
 echo "=============================================="
-```
