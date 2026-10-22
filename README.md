@@ -354,6 +354,29 @@ https://github.com/eEkcoffEe/docker-certbot-manager
 
 https://raw.githubusercontent.com/eEkcoffEe/docker-certbot-manager/main/issue-cert.sh
 
+## Заметка
+
+```bash
+services:
+  remnanode:
+    container_name: remnanode
+    hostname: remnanode
+    image: remnawave/node:latest
+    network_mode: host
+    restart: always
+    cap_add:
+      - NET_ADMIN
+    ulimits:
+      nofile:
+        soft: 1111111
+        hard: 1111111
+    environment:
+      - NODE_PORT=1111
+      - SECRET_KEY="ww22ww22ww22"
+    volumes:
+      - '/opt/certbot/certs:/etc/letsencrypt:ro'
+```
+
 ## Лицензия
 
 MIT
